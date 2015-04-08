@@ -10,6 +10,9 @@
     <string name="add_et">Enter player name</string>
     <string name="add_btn_ok">OK</string>
     <string name="add_btn_cancel">Cancel</string>
+	
+	<string name="action_use_default">Use default</string>
+	<string name="action_back">Back</string>
 
     <string name="action_about">About</string>
     <string name="about_title">About program</string>
