@@ -1,0 +1,1 @@
+include ':app', ':p0031_firstproject', ':p0041_basicviews', ':p0051_layoutfiles', ':p0061_layouts', ':p0211_twoactivity', ':p0231_oneactivitystate', ':p0241_twoactivitystate', ':gamescore'

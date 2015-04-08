@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidLessons.iml" filepath="$PROJECT_DIR$/AndroidLessons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gamescore/gamescore.iml" filepath="$PROJECT_DIR$/gamescore/gamescore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0031_firstproject/p0031_firstproject.iml" filepath="$PROJECT_DIR$/p0031_firstproject/p0031_firstproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0041_basicviews/p0041_basicviews.iml" filepath="$PROJECT_DIR$/p0041_basicviews/p0041_basicviews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0051_layoutfiles/p0051_layoutfiles.iml" filepath="$PROJECT_DIR$/p0051_layoutfiles/p0051_layoutfiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0061_layouts/p0061_layouts.iml" filepath="$PROJECT_DIR$/p0061_layouts/p0061_layouts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0211_twoactivity/p0211_twoactivity.iml" filepath="$PROJECT_DIR$/p0211_twoactivity/p0211_twoactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0231_oneactivitystate/p0231_oneactivitystate.iml" filepath="$PROJECT_DIR$/p0231_oneactivitystate/p0231_oneactivitystate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0241_twoactivitystate/p0241_twoactivitystate.iml" filepath="$PROJECT_DIR$/p0241_twoactivitystate/p0241_twoactivitystate.iml" />
+    </modules>
+  </component>
+</project>
+
