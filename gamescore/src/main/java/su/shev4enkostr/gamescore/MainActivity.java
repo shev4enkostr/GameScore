@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+import android.widget.*;
 
 
-public class MainActivity extends Activity
+public class MainActivity extends Activity implements View.OnClickListener
 {
-    private static int maxNumberOfPlayers = 6;
+    private Button btnSubmit;
+	private static int maxNumberOfPlayers = 6;
     private static int availableNumberOfPlayers = maxNumberOfPlayers;
     private Players[] player = new Players[maxNumberOfPlayers];
 
@@ -19,6 +22,9 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+		
+		btnSubmit = (Button) findViewById(R.id.btn_submit);
+		btnSubmit.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +62,12 @@ public class MainActivity extends Activity
                 startActivity(intent);
             }
         }
+		
+		if (id == R.id.action_use_default)
+		{
+			Intent intent = new Intent(this, DefaultActivity.class);
+			startActivity(intent);
+		}
 
         if (id == R.id.action_exit)
         {
@@ -64,6 +76,15 @@ public class MainActivity extends Activity
 
         return super.onOptionsItemSelected(item);
     }
+
+	@Override
+	public void onClick(View view)
+	{
+		// Test btnSubmit
+		if (view.getId() == R.id.btn_submit)
+			Toast.makeText(this, "Main Activity Submit", Toast.LENGTH_SHORT).show();
+		
+	}
 
     public void createPlayer(String name)
     {
