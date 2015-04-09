@@ -3,6 +3,11 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:context=".DefaultActivity">
 
+	<item android:id="@+id/action_clear"
+		android:title="@string/action_clear"
+		android:orderInCategory="100"
+		app:showAsAction="never"/>
+	
 	<item android:id="@+id/action_back"
 		android:title="@string/action_back"
 		android:orderInCategory="100"

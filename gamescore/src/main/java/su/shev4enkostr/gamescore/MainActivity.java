@@ -13,7 +13,7 @@ import android.widget.*;
 public class MainActivity extends Activity implements View.OnClickListener
 {
     private Button btnSubmit;
-	private static int maxNumberOfPlayers = 6;
+	private static int maxNumberOfPlayers = 8;
     private static int availableNumberOfPlayers = maxNumberOfPlayers;
     private Players[] player = new Players[maxNumberOfPlayers];
 
@@ -44,12 +44,6 @@ public class MainActivity extends Activity implements View.OnClickListener
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_about)
-        {
-            Intent intent = new Intent(this, AboutActivity.class);
-            startActivity(intent);
-        }
-
         if (id == R.id.action_add)
         {
             if (availableNumberOfPlayers == 0)
@@ -62,6 +56,22 @@ public class MainActivity extends Activity implements View.OnClickListener
                 startActivity(intent);
             }
         }
+		
+		if (id == R.id.action_about)
+        {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
+        }
+		
+		if (id == R.id.action_delete)
+		{
+			
+		}
+		
+		if (id == R.id.action_clear)
+		{
+			
+		}
 		
 		if (id == R.id.action_use_default)
 		{
@@ -83,7 +93,6 @@ public class MainActivity extends Activity implements View.OnClickListener
 		// Test btnSubmit
 		if (view.getId() == R.id.btn_submit)
 			Toast.makeText(this, "Main Activity Submit", Toast.LENGTH_SHORT).show();
-		
 	}
 
     public void createPlayer(String name)

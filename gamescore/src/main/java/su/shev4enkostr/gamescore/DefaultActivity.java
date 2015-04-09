@@ -8,6 +8,8 @@ import android.widget.*;
 public class DefaultActivity extends Activity implements View.OnClickListener
 {
 	private Button btnSubmit;
+	private static int maxNumberOfPlayers = 8;
+    private Players[] player = new Players[maxNumberOfPlayers];
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -29,7 +31,14 @@ public class DefaultActivity extends Activity implements View.OnClickListener
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		if (item.getItemId() == R.id.action_back)
+		int id = item.getItemId();
+		
+		if (id == R.id.action_clear)
+		{
+			
+		}
+		
+		if (id == R.id.action_back)
 		{
 			finish();
 		}
