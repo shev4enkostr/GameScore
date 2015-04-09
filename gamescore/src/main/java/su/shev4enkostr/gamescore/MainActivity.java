@@ -23,7 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 		
-		btnSubmit = (Button) findViewById(R.id.btn_submit);
+		btnSubmit = (Button) findViewById(R.id.btn_submit_main);
 		btnSubmit.setOnClickListener(this);
     }
 
@@ -91,7 +91,7 @@ public class MainActivity extends Activity implements View.OnClickListener
 	public void onClick(View view)
 	{
 		// Test btnSubmit
-		if (view.getId() == R.id.btn_submit)
+		if (view.getId() == R.id.btn_submit_main)
 			Toast.makeText(this, "Main Activity Submit", Toast.LENGTH_SHORT).show();
 	}
 

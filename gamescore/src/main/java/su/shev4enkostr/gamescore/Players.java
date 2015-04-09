@@ -38,8 +38,13 @@ public class Players
         return numberOfPlayer;
     }
 
-    public int getScore(Players player)
+    public int getScore()
     {
-        return player.score;
+        return this.score;
+    }
+
+    public void addScore(int score)
+    {
+        this.score += score;
     }
 }
