@@ -8,6 +8,16 @@
 		android:orderInCategory="100"
 		app:showAsAction="never"/>
 	
+	<item android:id="@+id/action_delete"
+		android:title="@string/action_delete"
+		android:orderInCategory="100"
+		app:showAsAction="never"/>
+	
+	<item android:id="@+id/action_clear"
+		android:title="@string/action_clear"
+		android:orderInCategory="100"
+		app:showAsAction="never"/>
+	
     <item android:id="@+id/action_use_default"
           android:title="@string/action_use_default"
           android:orderInCategory="100"
