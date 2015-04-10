@@ -14,10 +14,9 @@ public class Players
         numberOfPlayer++;
     }
 
-    public Players(String name, int score)
+    public Players(String name)
     {
         this.name = name;
-        this.score = score;
     }
 
     public Players()

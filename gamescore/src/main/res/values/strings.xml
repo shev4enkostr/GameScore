@@ -33,7 +33,8 @@
 
     <string name="action_exit">Exit</string>
 
-    <string name="toast_max_number_of_players">Max number of players is !</string>
+    <string name="toast_max_number_of_players">Max number of players!</string>
     <string name="toast_enter_name">Please, enter Player name!</string>
+    <string name="toast_no_name">You are not enter any name...</string>
 
 </resources>

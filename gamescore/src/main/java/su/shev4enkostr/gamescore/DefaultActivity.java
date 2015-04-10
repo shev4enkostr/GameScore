@@ -3,6 +3,8 @@ package su.shev4enkostr.gamescore;
 import android.app.Activity;
 import android.os.*;
 import android.view.*;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.*;
 
 public class DefaultActivity extends Activity implements View.OnClickListener
@@ -11,6 +13,12 @@ public class DefaultActivity extends Activity implements View.OnClickListener
     private Players[] player = new Players[maxNumberOfPlayers];
 
     private Button btnSubmit;
+
+    private TextView[] tvNamePlayer = new TextView[maxNumberOfPlayers];
+    private int[] idNamePlayer = {R.id.tv_name_player1, R.id.tv_name_player2,
+            R.id.tv_name_player3, R.id.tv_name_player4,
+            R.id.tv_name_player5, R.id.tv_name_player6,
+            R.id.tv_name_player7, R.id.tv_name_player8};
 
     private EditText[] etEnterScorePlayer = new EditText[maxNumberOfPlayers];
 
@@ -38,6 +46,8 @@ public class DefaultActivity extends Activity implements View.OnClickListener
         for (int i = 0; i < maxNumberOfPlayers; i++)
         {
             player[i] = new Players();
+
+            tvNamePlayer[i] = (TextView) findViewById(idNamePlayer[i]);
 
             etEnterScorePlayer[i] = (EditText) findViewById(idEtScore[i]);
 
@@ -76,6 +86,9 @@ public class DefaultActivity extends Activity implements View.OnClickListener
 		// Test btnSubmit
 		if (view.getId() == R.id.btn_submit_default)
         {
+            Animation hyperSpaceJump = AnimationUtils.loadAnimation(this, R.anim.hyperspace_jump);
+            btnSubmit.startAnimation(hyperSpaceJump);
+
             addScore();
         }
 	}
@@ -98,6 +111,11 @@ public class DefaultActivity extends Activity implements View.OnClickListener
     {
         for (int i = 0; i < maxNumberOfPlayers; i++)
         {
+            Animation combo = AnimationUtils.loadAnimation(this, R.anim.combo);
+            tvScorePlayer[i].startAnimation(combo);
+            //tvNamePlayer[i].startAnimation(combo);
+            //etEnterScorePlayer[i].startAnimation(combo);
+
             player[i].setScore(0);
             tvScorePlayer[i].setText(String.valueOf(player[i].getScore()));
         }

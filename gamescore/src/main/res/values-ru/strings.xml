@@ -36,5 +36,6 @@
 
     <string name="toast_max_number_of_players">Максимальное количество игроков!</string>
     <string name="toast_enter_name">Пожалуйста, введите имя игрока!</string>
+    <string name="toast_no_name">Вы не ввели имя игрока...</string>
 
 </resources>
