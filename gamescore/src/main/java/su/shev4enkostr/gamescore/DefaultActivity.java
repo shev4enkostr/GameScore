@@ -86,9 +86,11 @@ public class DefaultActivity extends Activity implements View.OnClickListener
         {
             if (etEnterScorePlayer[i].length() != 0)
             {
-                player[i].addScore(Integer.getInteger(etEnterScorePlayer[1].getText().toString()));
+                player[i].addScore(Integer.parseInt(etEnterScorePlayer[i].getText().toString()));
                 tvScorePlayer[i].setText(String.valueOf(player[i].getScore()));
             }
+			
+			etEnterScorePlayer[i].setText("");
         }
     }
 

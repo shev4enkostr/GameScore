@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Игровой счет</string>
+
+    <string name="btn_submit">Готово</string>
+    <string name="et_hint">Очки</string>
+
+    <string name="action_add">Новый игрок</string>
+    <string name="add_title">Добавить нового игрока</string>
+    <string name="add_et">Введите имя игрока</string>
+    <string name="add_btn_ok">OK</string>
+    <string name="add_btn_cancel">Отмена</string>
+
+	<string name="action_delete">Удалить игрока</string>
+
+    <string name="action_clear">Очистить счет</string>
+
+	<string name="action_use_default">Раскладка по умолчанию</string>
+	<string name="action_back">Назад</string>
+	<string name="default_name_player1">Игрок 1</string>
+	<string name="default_name_player2">Игрок 2</string>
+	<string name="default_name_player3">Игрок 3</string>
+	<string name="default_name_player4">Игрок 4</string>
+	<string name="default_name_player5">Игрок 5</string>
+	<string name="default_name_player6">Игрок 6</string>
+	<string name="default_name_player7">Игрок 7</string>
+	<string name="default_name_player8">Игрок 8</string>
+
+    <string name="action_about">О программе</string>
+    <string name="about_title">О программе</string>
+    <string name="about_btn_text">OK</string>
+    <string name="about_text"><B>Разработано\nБурдовицыным Станиславом</B></string>
+
+    <string name="action_exit">Выход</string>
+
+    <string name="toast_max_number_of_players">Максимальное количество игроков!</string>
+    <string name="toast_enter_name">Пожалуйста, введите имя игрока!</string>
+
+</resources>
