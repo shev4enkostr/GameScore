@@ -83,7 +83,6 @@ public class DefaultActivity extends Activity implements View.OnClickListener
 	@Override
 	public void onClick(View view)
 	{
-		// Test btnSubmit
 		if (view.getId() == R.id.btn_submit_default)
         {
             Animation hyperSpaceJump = AnimationUtils.loadAnimation(this, R.anim.hyperspace_jump);

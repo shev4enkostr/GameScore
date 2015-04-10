@@ -24,6 +24,7 @@ public class MainActivity extends Activity implements View.OnClickListener
 
     private static int maxNumberOfPlayers = 8;
     private static int currentPlayerNumber = 0;
+	
     private Players[] player = new Players[maxNumberOfPlayers];
 
     private Button btnSubmit;
@@ -65,8 +66,6 @@ public class MainActivity extends Activity implements View.OnClickListener
 		btnSubmit = (Button) findViewById(R.id.btn_submit_main);
 		btnSubmit.setOnClickListener(this);
 
-
-
         for (int i = 0; i < maxNumberOfPlayers; i++)
         {
             player[i] = new Players();
@@ -77,18 +76,12 @@ public class MainActivity extends Activity implements View.OnClickListener
 
             Log.d(TAG, "llEtEnterNamePlayer[i] = (LinearLayout) findViewById(idLlEtScore[i])");
             llEtEnterNamePlayer[i] = (LinearLayout) findViewById(idLlEtScore[i]);
-
-            //Log.d(TAG, "etEnterScorePlayer[i].setId(idEtScore[i]) \n");
-            //etEnterScorePlayer[i].setId(idEtScore[i]);
         }
-
-        //this.createPlayer(addPlayerName);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -148,7 +141,6 @@ public class MainActivity extends Activity implements View.OnClickListener
 	@Override
 	public void onClick(View view)
 	{
-		// Test btnSubmit
 		if (view.getId() == R.id.btn_submit_main)
         {
             Animation hyperSpaceJump = AnimationUtils.loadAnimation(this, R.anim.hyperspace_jump);
