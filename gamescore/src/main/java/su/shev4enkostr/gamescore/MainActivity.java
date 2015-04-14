@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.*;
+import android.content.*;
 
 public class MainActivity extends Activity implements View.OnClickListener
 {
@@ -110,8 +112,23 @@ public class MainActivity extends Activity implements View.OnClickListener
 		
 		if (id == R.id.action_about)
         {
-            Intent intent = new Intent(this, AboutActivity.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this, AboutActivity.class);
+            //startActivity(intent);
+			
+			new AlertDialog.Builder(this)
+			.setTitle(R.string.about_title)
+			.setMessage(R.string.about_text)
+			.setIcon(android.R.drawable.ic_dialog_info)
+			.setCancelable(false)
+			.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
+			{
+				public void onClick(DialogInterface dialod, int which)
+				{
+					dialod.cancel();
+				}
+			})
+			
+			.show();
         }
 		
 		if (id == R.id.action_delete)
