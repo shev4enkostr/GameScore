@@ -157,7 +157,7 @@ public class MainActivity extends Activity implements View.OnClickListener
 
                 new AlertDialog.Builder(this)
                     .setTitle(R.string.add_title)
-                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .setIcon(android.R.drawable.ic_menu_add)
                     .setCancelable(false)
                     .setView(addView)
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
@@ -264,7 +264,7 @@ public class MainActivity extends Activity implements View.OnClickListener
 
         player[i].setName(name);
 
-        createEditTextScore(i);
+        createViews(i);
 
         tvNamePlayer[i].setText(name);
 
@@ -273,7 +273,7 @@ public class MainActivity extends Activity implements View.OnClickListener
         currentPlayerNumber++;
     }
 
-    private void createEditTextScore(int playerNumber)
+    private void createViews(int playerNumber)
     {
         int i = playerNumber;
 
@@ -361,7 +361,7 @@ public class MainActivity extends Activity implements View.OnClickListener
             player[i].setScore(score);
             tvNamePlayer[i].setText(name);
             tvScorePlayer[i].setText(String.valueOf(score));
-            createEditTextScore(i);
+            createViews(i);
         }
     }
 }
