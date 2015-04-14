@@ -2,10 +2,10 @@ package su.shev4enkostr.gamescore;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,12 +17,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.app.*;
-import android.content.*;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 public class MainActivity extends Activity implements View.OnClickListener
 {
-    private static String TAG = "GameScore";
+    //private static String TAG = "GameScore";
 
     private static int maxNumberOfPlayers = 8;
     private static int currentPlayerNumber = 0;
@@ -30,6 +30,14 @@ public class MainActivity extends Activity implements View.OnClickListener
     private Players[] player = new Players[maxNumberOfPlayers];
 
     private Button btnSubmit;
+
+    private EditText etAdd;
+
+    private LinearLayout[] llPlayer = new LinearLayout[maxNumberOfPlayers];
+    private int[] idLlPlayer = {R.id.ll_player1, R.id.ll_player2,
+            R.id.ll_player3, R.id.ll_player4,
+            R.id.ll_player5, R.id.ll_player6,
+            R.id.ll_player7, R.id.ll_player8};
 
     private TextView[] tvNamePlayer = new TextView[maxNumberOfPlayers];
     private int[] idNamePlayer = {R.id.tv_name_player1, R.id.tv_name_player2,
@@ -55,9 +63,10 @@ public class MainActivity extends Activity implements View.OnClickListener
             R.id.et_enter_score_player5, R.id.et_enter_score_player6,
             R.id.et_enter_score_player7, R.id.et_enter_score_player8};
 
-    private LinearLayout.LayoutParams etScoreLParams =
-            new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+    private SharedPreferences saves;
 
+    //private LinearLayout.LayoutParams etScoreLParams =
+            //new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -72,13 +81,49 @@ public class MainActivity extends Activity implements View.OnClickListener
         {
             player[i] = new Players();
 
+            llPlayer[i] = (LinearLayout) findViewById(idLlPlayer[i]);
+
             tvNamePlayer[i] = (TextView) findViewById(idNamePlayer[i]);
 
             tvScorePlayer[i] = (TextView) findViewById(idTvScore[i]);
 
-            Log.d(TAG, "llEtEnterNamePlayer[i] = (LinearLayout) findViewById(idLlEtScore[i])");
             llEtEnterNamePlayer[i] = (LinearLayout) findViewById(idLlEtScore[i]);
         }
+
+        loadScore();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        saveScore();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.exit_title)
+                .setMessage(R.string.exit_message)
+                .setIcon(android.R.drawable.ic_lock_power_off)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i)
+                    {
+                        finish();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i)
+                    {
+                        dialogInterface.cancel();
+                    }
+                })
+                .show();
     }
 
     @Override
@@ -105,8 +150,44 @@ public class MainActivity extends Activity implements View.OnClickListener
             }
             else
             {
-                Intent intent = new Intent(this, AddActivity.class);
-                startActivityForResult(intent, 1);
+                //Intent intent = new Intent(this, AddActivity.class);
+                //startActivityForResult(intent, 1);
+                LinearLayout addView = (LinearLayout) getLayoutInflater().inflate(R.layout.dialog_add, null);
+                etAdd = (EditText) addView.findViewById(R.id.et_add);
+
+                new AlertDialog.Builder(this)
+                    .setTitle(R.string.add_title)
+                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .setCancelable(false)
+                    .setView(addView)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i)
+                        {
+                            if (etAdd.length() == 0)
+                            {
+                                Toast.makeText(MainActivity.this, R.string.toast_no_name, Toast.LENGTH_SHORT).show();
+                            }
+                            else
+                            {
+                                createPlayer(etAdd.getText().toString());
+                            }
+
+                            dialogInterface.cancel();
+                        }
+                    })
+
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i)
+                        {
+                            dialogInterface.cancel();
+                        }
+                    })
+
+                    .show();
             }
         }
 		
@@ -116,19 +197,18 @@ public class MainActivity extends Activity implements View.OnClickListener
             //startActivity(intent);
 			
 			new AlertDialog.Builder(this)
-			.setTitle(R.string.about_title)
-			.setMessage(R.string.about_text)
-			.setIcon(android.R.drawable.ic_dialog_info)
-			.setCancelable(false)
-			.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
-			{
-				public void onClick(DialogInterface dialod, int which)
-				{
-					dialod.cancel();
-				}
-			})
+			    .setTitle(R.string.about_title)
+			    .setMessage(R.string.about_text)
+			    .setIcon(android.R.drawable.ic_dialog_info)
+			    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
+			    {
+				    public void onClick(DialogInterface dialogInterface, int which)
+				    {
+                        dialogInterface.cancel();
+				    }
+			    })
 			
-			.show();
+			    .show();
         }
 		
 		if (id == R.id.action_delete)
@@ -167,7 +247,7 @@ public class MainActivity extends Activity implements View.OnClickListener
         }
 	}
 
-    @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         if (resultCode == RESULT_OK)
@@ -176,13 +256,26 @@ public class MainActivity extends Activity implements View.OnClickListener
             createPlayer(name);
         }
         else Toast.makeText(this, R.string.toast_no_name, Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
     public void createPlayer(String name)
     {
         int i = currentPlayerNumber;
 
         player[i].setName(name);
+
+        createEditTextScore(i);
+
+        tvNamePlayer[i].setText(name);
+
+        tvScorePlayer[i].setText(String.valueOf(player[i].getScore()));
+
+        currentPlayerNumber++;
+    }
+
+    private void createEditTextScore(int playerNumber)
+    {
+        int i = playerNumber;
 
         etEnterScorePlayer[i] = new EditText(this);
 
@@ -195,11 +288,7 @@ public class MainActivity extends Activity implements View.OnClickListener
 
         llEtEnterNamePlayer[i].addView(etEnterScorePlayer[i]);
 
-        tvNamePlayer[i].setText(name);
-
-        tvScorePlayer[i].setText(String.valueOf(player[i].getScore()));
-
-        currentPlayerNumber++;
+        llPlayer[i].setBackgroundResource(R.drawable.back);
     }
 
     public void deletePlayer()
@@ -211,6 +300,7 @@ public class MainActivity extends Activity implements View.OnClickListener
             tvNamePlayer[i].setText("");
             tvScorePlayer[i].setText("");
             llEtEnterNamePlayer[i].removeAllViews();
+            llPlayer[i].setBackgroundResource(R.drawable.back_transparent);
             currentPlayerNumber--;
         }
     }
@@ -240,6 +330,38 @@ public class MainActivity extends Activity implements View.OnClickListener
 
             player[i].setScore(0);
             tvScorePlayer[i].setText(String.valueOf(player[i].getScore()));
+        }
+    }
+
+    public void saveScore()
+    {
+        saves = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor ed = saves.edit();
+        ed.putInt("numberOfPlayers", currentPlayerNumber);
+        ed.apply();
+
+        for (int i = 0; i < currentPlayerNumber; i++)
+        {
+            ed.putString("playerName" + i, player[i].getName());
+            ed.putInt("playerScore" + i, player[i].getScore());
+            ed.apply();
+        }
+    }
+
+    public void loadScore()
+    {
+        saves = getPreferences(MODE_PRIVATE);
+        currentPlayerNumber = saves.getInt("numberOfPlayers", 0);
+
+        for (int i = 0; i < currentPlayerNumber; i++)
+        {
+            String name = saves.getString("playerName" + i, "");
+            int score = saves.getInt("playerScore" + i, 0);
+            player[i].setName(name);
+            player[i].setScore(score);
+            tvNamePlayer[i].setText(name);
+            tvScorePlayer[i].setText(String.valueOf(score));
+            createEditTextScore(i);
         }
     }
 }

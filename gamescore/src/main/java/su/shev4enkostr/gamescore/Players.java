@@ -37,6 +37,11 @@ public class Players
         return numberOfPlayer;
     }
 
+    public String getName()
+    {
+        return this.name;
+    }
+
     public int getScore()
     {
         return this.score;

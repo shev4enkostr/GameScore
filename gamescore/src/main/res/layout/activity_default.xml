@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:layout_marginLeft="10dp"
-	android:layout_marginRight="10dp"
+	android:layout_marginLeft="3dp"
+	android:layout_marginRight="3dp"
     android:orientation="vertical">
 	
     <LinearLayout
@@ -12,9 +12,10 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
+        android:background="@drawable/back"
         android:baselineAligned="false">
 
         <LinearLayout
@@ -28,9 +29,9 @@
                 android:id="@+id/tv_name_player1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player1"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -48,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -67,7 +68,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -79,8 +80,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/back"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -95,9 +97,9 @@
                 android:id="@+id/tv_name_player2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player2"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -115,7 +117,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -134,7 +136,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -146,8 +148,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/back"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -162,9 +165,9 @@
                 android:id="@+id/tv_name_player3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player3"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -182,7 +185,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -201,7 +204,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -213,8 +216,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/back"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -229,9 +233,9 @@
                 android:id="@+id/tv_name_player4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player4"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -249,7 +253,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -268,7 +272,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -279,8 +283,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/back"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -295,9 +300,9 @@
                 android:id="@+id/tv_name_player5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player5"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -315,7 +320,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -334,7 +339,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -345,8 +350,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/back"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -361,9 +367,9 @@
                 android:id="@+id/tv_name_player6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player6"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -381,7 +387,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -400,7 +406,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -411,8 +417,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/back"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -427,9 +434,9 @@
                 android:id="@+id/tv_name_player7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player7"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -447,7 +454,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -466,7 +473,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -478,8 +485,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/back"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -494,9 +502,9 @@
                 android:id="@+id/tv_name_player8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="@string/default_name_player8"
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
         </LinearLayout>
@@ -514,7 +522,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
 
-                android:textSize="30sp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>
@@ -533,7 +541,7 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/et_hint"
                 android:inputType="numberSigned"
-				android:textSize="30sp"
+				android:textSize="30dp"
 				android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
@@ -549,7 +557,7 @@
         android:layout_weight="1">
         <Button
             android:id="@+id/btn_submit_default"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:text="@string/btn_submit"/>

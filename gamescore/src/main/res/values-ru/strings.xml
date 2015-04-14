@@ -30,11 +30,11 @@
     <string name="action_about">О программе</string>
     <string name="about_title">О программе</string>
     <string name="about_btn_text">OK</string>
-    <string name="about_text">Это приложение служит для подсчета очков в играх.\n
-        Приятной Вам игры!\n
-        <B>Created by\nshev4enkostr</B></string>
+    <string name="about_text"><div aligin="center">Это приложение служит для подсчета очков в играх.\nПриятной Вам игры!\n<B>Created by\nshev4enkostr</B></div></string>
 
     <string name="action_exit">Выход</string>
+    <string name="exit_title">Выход</string>
+    <string name="exit_message">Вы уверены?</string>
 
     <string name="toast_max_number_of_players">Максимальное количество игроков!</string>
     <string name="toast_enter_name">Пожалуйста, введите имя игрока!</string>

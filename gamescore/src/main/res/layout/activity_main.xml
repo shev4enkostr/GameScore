@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:layout_marginLeft="10dp"
-	android:layout_marginRight="10dp"
+	android:layout_marginLeft="3dp"
+	android:layout_marginRight="3dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,8 +12,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -28,7 +28,7 @@
                 android:id="@+id/tv_name_player1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -69,8 +69,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -85,7 +85,7 @@
                 android:id="@+id/tv_name_player2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -126,8 +126,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -142,7 +142,7 @@
                 android:id="@+id/tv_name_player3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -183,8 +183,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -199,7 +199,7 @@
                 android:id="@+id/tv_name_player4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -239,8 +239,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -255,7 +255,7 @@
                 android:id="@+id/tv_name_player5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -295,8 +295,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -311,7 +311,7 @@
                 android:id="@+id/tv_name_player6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -351,8 +351,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -367,7 +367,7 @@
                 android:id="@+id/tv_name_player7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -408,8 +408,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:baselineAligned="false">
 
@@ -424,7 +424,7 @@
                 android:id="@+id/tv_name_player8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_green_dark"/>
@@ -469,7 +469,7 @@
         android:layout_weight="1">
         <Button
             android:id="@+id/btn_submit_main"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:text="@string/btn_submit"/>

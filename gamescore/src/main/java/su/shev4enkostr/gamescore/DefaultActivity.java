@@ -1,6 +1,7 @@
 package su.shev4enkostr.gamescore;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.*;
 import android.view.*;
 import android.view.animation.Animation;
@@ -14,14 +15,7 @@ public class DefaultActivity extends Activity implements View.OnClickListener
 
     private Button btnSubmit;
 
-    private TextView[] tvNamePlayer = new TextView[maxNumberOfPlayers];
-    private int[] idNamePlayer = {R.id.tv_name_player1, R.id.tv_name_player2,
-            R.id.tv_name_player3, R.id.tv_name_player4,
-            R.id.tv_name_player5, R.id.tv_name_player6,
-            R.id.tv_name_player7, R.id.tv_name_player8};
-
     private EditText[] etEnterScorePlayer = new EditText[maxNumberOfPlayers];
-
     private int[] idEtScore = {R.id.et_enter_score_player1, R.id.et_enter_score_player2,
             R.id.et_enter_score_player3, R.id.et_enter_score_player4,
             R.id.et_enter_score_player5, R.id.et_enter_score_player6,
@@ -32,6 +26,8 @@ public class DefaultActivity extends Activity implements View.OnClickListener
             R.id.tv_score_player3, R.id.tv_score_player4,
             R.id.tv_score_player5, R.id.tv_score_player6,
             R.id.tv_score_player7, R.id.tv_score_player8};
+
+    private SharedPreferences saves;
 
 
     @Override
@@ -47,16 +43,22 @@ public class DefaultActivity extends Activity implements View.OnClickListener
         {
             player[i] = new Players();
 
-            tvNamePlayer[i] = (TextView) findViewById(idNamePlayer[i]);
-
             etEnterScorePlayer[i] = (EditText) findViewById(idEtScore[i]);
 
             tvScorePlayer[i] = (TextView) findViewById(idTvScore[i]);
             tvScorePlayer[i].setText(String.valueOf(player[i].getScore()));
         }
+
+        loadScore();
 	}
 
-	@Override
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveScore();
+    }
+
+    @Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		getMenuInflater().inflate(R.menu.menu_default, menu);
@@ -117,6 +119,33 @@ public class DefaultActivity extends Activity implements View.OnClickListener
 
             player[i].setScore(0);
             tvScorePlayer[i].setText(String.valueOf(player[i].getScore()));
+        }
+    }
+
+    public void saveScore()
+    {
+        saves = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor ed = saves.edit();
+        //ed.putInt("maxNumberOfPlayers", maxNumberOfPlayers);
+        ed.apply();
+
+        for (int i = 0; i < maxNumberOfPlayers; i++)
+        {
+            ed.putInt("playerScore" + i, player[i].getScore());
+            ed.apply();
+        }
+    }
+
+    public void loadScore()
+    {
+        saves = getPreferences(MODE_PRIVATE);
+        //maxNumberOfPlayers = saves.getInt("maxNumberOfPlayers", 0);
+
+        for (int i = 0; i < maxNumberOfPlayers; i++)
+        {
+            int score = saves.getInt("playerScore" + i, 0);
+            player[i].setScore(score);
+            tvScorePlayer[i].setText(String.valueOf(score));
         }
     }
 }
