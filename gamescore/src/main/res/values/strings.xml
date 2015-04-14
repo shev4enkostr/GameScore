@@ -29,7 +29,9 @@
     <string name="action_about">About</string>
     <string name="about_title">About program</string>
     <string name="about_btn_text">OK</string>
-    <string name="about_text"><B>Created by\nStanislav Burdovitsyn</B></string>
+    <string name="about_text">This application is used for scoring in games.\n
+        Enjoy your game!\n
+        <B>Created by\nshev4enkostr</B></string>
 
     <string name="action_exit">Exit</string>
 
