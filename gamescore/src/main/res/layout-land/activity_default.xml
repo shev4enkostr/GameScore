@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:layout_marginLeft="3dp"
+	android:layout_marginRight="3dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+		style="@style/ll_player"
+        android:id="@+id/ll_player1"
+		android:background="@drawable/back">
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player1"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player1"
+                android:text="@string/default_name_player1"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player1"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player1"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player1"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player1"/>
+        </LinearLayout>
+		
+		
+		<LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player2"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player2"
+                android:text="@string/default_name_player2"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player2"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player2"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player2"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player2"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+	
+	<LinearLayout
+		style="@style/ll_player"
+        android:id="@+id/ll_player3"
+		android:background="@drawable/back">
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player3"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player3"
+                android:text="@string/default_name_player3"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player3"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player3"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player3"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player3"/>
+        </LinearLayout>
+
+
+		<LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player4"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player4"
+                android:text="@string/default_name_player4"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player4"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player4"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player4"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player4"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+	
+	<LinearLayout
+		style="@style/ll_player"
+        android:id="@+id/ll_player5"
+		android:background="@drawable/back">
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player5"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player5"
+                android:text="@string/default_name_player5"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player5"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player5"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player5"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player5"/>
+        </LinearLayout>
+
+
+		<LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player6"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player6"
+                android:text="@string/default_name_player6"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player6"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player6"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player6"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player6"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+	
+	<LinearLayout
+		style="@style/ll_player"
+        android:id="@+id/ll_player7"
+		android:background="@drawable/back">
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player7"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player7"
+                android:text="@string/default_name_player7"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player7"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player7"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player7"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player7"/>
+        </LinearLayout>
+
+
+		<LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_name_player8"
+            android:layout_weight="0.95">
+            <TextView
+                style="@style/tv_player_name"
+				android:id="@+id/tv_name_player8"
+                android:text="@string/default_name_player8"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_score_player8"
+            android:layout_weight="1.05">
+            <TextView
+				style="@style/tv_player_score"
+                android:id="@+id/tv_score_player8"/>
+        </LinearLayout>
+
+        <LinearLayout
+			style="@style/ll_player_view"
+            android:id="@+id/ll_enter_score_player8"
+            android:layout_weight="1">
+            <EditText
+				style="@style/et_player_score"
+                android:id="@+id/et_enter_score_player8"/>
+        </LinearLayout>
+    </LinearLayout>
+
+	
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btn_submit_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/btn_submit"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -150,8 +150,11 @@ public class MainActivity extends Activity implements View.OnClickListener
             }
             else
             {
-                //Intent intent = new Intent(this, AddActivity.class);
+                //Old code with intent & startActivityForResult()...
+				//Intent intent = new Intent(this, AddActivity.class);
                 //startActivityForResult(intent, 1);
+				
+				//New code with AlertDialog()...
                 LinearLayout addView = (LinearLayout) getLayoutInflater().inflate(R.layout.dialog_add, null);
                 etAdd = (EditText) addView.findViewById(R.id.et_add);
 
@@ -193,9 +196,11 @@ public class MainActivity extends Activity implements View.OnClickListener
 		
 		if (id == R.id.action_about)
         {
-            //Intent intent = new Intent(this, AboutActivity.class);
+            //Old code with intent & startActivity()...
+			//Intent intent = new Intent(this, AboutActivity.class);
             //startActivity(intent);
 			
+			//New code with AlertDialog()...
 			new AlertDialog.Builder(this)
 			    .setTitle(R.string.about_title)
 			    .setMessage(R.string.about_text)
@@ -247,7 +252,8 @@ public class MainActivity extends Activity implements View.OnClickListener
         }
 	}
 
-    /*@Override
+    // Old code for add new player dialog
+	/*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         if (resultCode == RESULT_OK)
@@ -276,17 +282,20 @@ public class MainActivity extends Activity implements View.OnClickListener
     private void createViews(int playerNumber)
     {
         int i = playerNumber;
-
-        etEnterScorePlayer[i] = new EditText(this);
-
+		
+		//New realization with inflater
+		etEnterScorePlayer[i] = (EditText) getLayoutInflater().inflate(R.layout.edit_text_main, null);
         etEnterScorePlayer[i].setId(idEtScore[i]);
-        etEnterScorePlayer[i].setGravity(Gravity.CENTER_HORIZONTAL);
-        etEnterScorePlayer[i].setHint(R.string.et_hint);
-        etEnterScorePlayer[i].setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED);
-        etEnterScorePlayer[i].setTextSize(30);
-        etEnterScorePlayer[i].setTypeface(null, Typeface.BOLD);
-
-        llEtEnterNamePlayer[i].addView(etEnterScorePlayer[i]);
+		llEtEnterNamePlayer[i].addView(etEnterScorePlayer[i]);
+		
+		//Old code...
+		//etEnterScorePlayer[i] = new EditText(this);
+        //etEnterScorePlayer[i].setGravity(Gravity.CENTER_HORIZONTAL);
+        //etEnterScorePlayer[i].setHint(R.string.et_hint);
+        //etEnterScorePlayer[i].setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED);
+        //etEnterScorePlayer[i].setTextSize(30);
+        //etEnterScorePlayer[i].setTypeface(null, Typeface.BOLD);
+        //llEtEnterNamePlayer[i].addView(etEnterScorePlayer[i]);
 
         llPlayer[i].setBackgroundResource(R.drawable.back);
     }

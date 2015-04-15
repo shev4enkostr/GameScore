@@ -4,7 +4,53 @@
     <style name="AppTheme" parent="AppTheme">
         <!-- Customize your theme here. -->
     </style>
-
+	
+	<style name="ll_player">
+		<item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:baselineAligned">false</item>
+	</style>
+	
+	<style name="ll_player_view">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">center_vertical</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	
+	<style name="tv_player_name">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+		<item name="android:textSize">30dp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/holo_green_dark</item>
+	</style>
+	
+	<style name="tv_player_score">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:textSize">30dp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@android:color/holo_red_dark</item>
+	</style>
+	
+	<style name="et_player_score">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:hint">@string/et_hint</item>
+		<item name="android:inputType">numberSigned</item>
+		<item name="android:textSize">30dp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	
+	
     <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@null</item>
